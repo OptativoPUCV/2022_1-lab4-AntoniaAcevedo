@@ -60,7 +60,7 @@ HashMap * createMap(long capacity) {
   mapa -> size= 0;
   for ( int i = 0; i < capacity ; i++ )
     {
-      mapa -> buckets = NULL;
+      mapa -> buckets[i] = NULL;
     }
   return mapa;
 }
