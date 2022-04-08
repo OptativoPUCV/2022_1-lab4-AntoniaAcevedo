@@ -14,3 +14,14 @@ Fri Apr  8 15:37:21 UTC 2022:
  tests:  1|5
 total_score: 10/70
 407e3b8
+Fri Apr  8 16:10:47 UTC 2022: 
+ hashmap.c | 9 ++++++++-
+ 1 file changed, 8 insertions(+), 1 deletion(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:43:9: error: unused variable ‘valor’ [-Werror=unused-variable]
+   Pair *valor = createPair(key,value);
+         ^~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+8954fc2
