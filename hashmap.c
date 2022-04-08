@@ -43,12 +43,14 @@ void insertMap(HashMap * map, char * key, void * value) {
   Pair *valor = createPair(key,value);
   map -> current= hash(key,map -> capacity);
   while(map -> buckets[map -> current] != NULL || map -> buckets[map -> current]-> key == NULL)
-    {
-      map -> current ++;
-      if (map -> current == map -> capacity)
-        map -> current = 0;
-    }
-
+  {
+    map -> current ++;
+    if (map -> current == map -> capacity)
+      map -> current = 0;
+  }
+  map -> buckets[map -> current]= valor;
+  map -> size ++;
+  
 }
 
 void enlarge(HashMap * map) {

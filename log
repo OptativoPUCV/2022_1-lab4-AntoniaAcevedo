@@ -25,3 +25,8 @@ hashmap.c:43:9: error: unused variable ‘valor’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 8954fc2
+Fri Apr  8 16:14:37 UTC 2022: 
+ hashmap.c | 2 ++
+ 1 file changed, 2 insertions(+)
+ tests:  0|0
+6579c47
