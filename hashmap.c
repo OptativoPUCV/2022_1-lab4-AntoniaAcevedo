@@ -7,7 +7,7 @@
 
 
 typedef struct HashMap HashMap;
-int enlarge_called=0;
+int enlarge_called = 0;
 
 struct HashMap {
     Pair ** buckets;
@@ -52,8 +52,17 @@ void enlarge(HashMap * map) {
 
 
 HashMap * createMap(long capacity) {
-
-    return NULL;
+  
+  HashMap * mapa =(HashMap*) malloc(sizeof(HashMap));
+  mapa -> buckets= (Pair**)malloc(capacity* sizeof(Pair*));
+  mapa -> current= -1;
+  mapa -> capacity= capacity;
+  mapa -> size= 0;
+  for ( int i = 0; capacity > i ; i++ )
+    {
+      mapa -> buckets = NULL;
+    }
+  return mapa;
 }
 
 void eraseMap(HashMap * map,  char * key) {    
