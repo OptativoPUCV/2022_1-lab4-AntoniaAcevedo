@@ -161,3 +161,8 @@ Sun Apr 10 22:27:30 UTC 2022:
  tests:  16|1
 total_score: 60/70
 2db6f80
+Sun Apr 10 22:28:41 UTC 2022: 
+ hashmap.c | 13 +++++++++++++
+ 1 file changed, 13 insertions(+)
+ tests:  0|0
+5a83989
