@@ -70,3 +70,38 @@ Sun Apr 10 21:41:15 UTC 2022:
  tests:  13|2
 total_score: 50/70
 51e1fa7
+Sun Apr 10 21:43:13 UTC 2022: 
+ hashmap.c | 8 +++++++-
+ 1 file changed, 7 insertions(+), 1 deletion(-)
+test.c: In function ‘nextMap’:
+test.c:453:5: error: ‘main’ is normally a non-static function [-Werror=main]
+ int main( int argc, char *argv[] ) {
+     ^~~~
+test.c:511:1: error: expected declaration or statement at end of input
+ }
+ ^
+test.c:511:1: error: control reaches end of non-void function [-Werror=return-type]
+ }
+ ^
+At top level:
+test.c:453:5: error: ‘main’ defined but not used [-Werror=unused-function]
+ int main( int argc, char *argv[] ) {
+     ^~~~
+test.c:217:5: error: ‘insert_test5’ defined but not used [-Werror=unused-function]
+ int insert_test5(){ //factor de carga>0.7, se llama a función enlarge
+     ^~~~~~~~~~~~
+test.c:131:6: error: ‘compare_test’ defined but not used [-Werror=unused-function]
+ void compare_test(){
+      ^~~~~~~~~~~~
+test.c:125:6: error: ‘hash_test3’ defined but not used [-Werror=unused-function]
+ void hash_test3(){ //no random
+      ^~~~~~~~~~
+test.c:111:6: error: ‘hash_test2’ defined but not used [-Werror=unused-function]
+ void hash_test2(){ // colisiones
+      ^~~~~~~~~~
+test.c:100:6: error: ‘hash_test1’ defined but not used [-Werror=unused-function]
+ void hash_test1(){ // posición válida
+      ^~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+3e60d22
