@@ -10,7 +10,7 @@ typedef struct HashMap HashMap;
 int enlarge_called = 0;
 
 struct HashMap {
-    Pair ** buckets;
+    Pair ** buckets;                                                                                                                                                                                                                                                                       
     long size; //cantidad de datos/pairs en la tabla
     long capacity; //capacidad de la tabla
     long current; //indice del ultimo dato accedido
@@ -80,9 +80,16 @@ void eraseMap(HashMap * map,  char * key) {
 }
 
 Pair * searchMap(HashMap * map,  char * key) {   
-
-
-    return NULL;
+  map -> current= hash(key,map -> capacity);
+  while(map -> buckets[map -> current])
+  {
+    if (is_equal(map -> buckets[map -> current] -> key,key ) == 1){
+            break;
+        }
+        else map -> current ++;    
+    
+  }
+    return map -> buckets[map -> current];
 }
 
 Pair * firstMap(HashMap * map) {
